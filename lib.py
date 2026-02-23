@@ -10,7 +10,7 @@ books = np.array([
 books[books < 20] += 5
 
 # Convert to single row
-report = books.flatten()
+report = books.reshape(1, 9)
 
 print("Updated Borrowing Data:\n", books)
 print("\nSingle Row Format:\n", report)
