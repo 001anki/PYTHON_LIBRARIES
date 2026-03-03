@@ -7,8 +7,8 @@ A=np.array([
 
 
 T=np.array([
-    [0.8,0.2],# Behavior of traffic from Zone 1
-    [0.3,0.7]# Behavior of traffic from Zone 2
+    [0.8,0.2],# Behavior of traffic from Zone 1 :Probability
+    [0.3,0.7]# Behavior of traffic from Zone 2  :Probability
 ])
 
 
@@ -43,7 +43,27 @@ print("\n",A_new)
 #  [155. 195.]] zone-2
 #    R1   R2
 
+def Optimization(A,T):
+    np.dot(A,T)
+
 #  After signal Optimisation (after 1Hr)
 
 #Here, In Zone-1: In Route-2 out of 150 vehicle, 5 vehicle move to route 1
 #In zone-2: In Route-2 out of 250 vehicle, 55 moves towars Route-1
+
+
+
+while(1):
+    n=int(input("\n1.Show current Traffic\n2.Optimize the Traffic\n3.Exit\nEnter your choice:"))
+    if(n==1):
+        print("Original Trafic Matrix")
+        print("\n",A)
+        continue
+    elif(n==2):
+        print("\nNew Trafic Matrix after signal optimisation")
+        print("\n",Optimization(A,T))
+        continue
+    elif(n==3):
+        exit(0)
+    else:
+        print("\nNot Valid choice")
