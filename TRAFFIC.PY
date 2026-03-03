@@ -43,8 +43,8 @@ print("\n",A_new)
 #  [155. 195.]] zone-2
 #    R1   R2
 
-def Optimization(A,T):
-    np.dot(A,T)
+# def Optimization(A,T):
+#     np.dot(A,Optimization(A,T))
 
 #  After signal Optimisation (after 1Hr)
 
@@ -61,7 +61,7 @@ while(1):
         continue
     elif(n==2):
         print("\nNew Trafic Matrix after signal optimisation")
-        print("\n",Optimization(A,T))
+        print("\n",A_new)
         continue
     elif(n==3):
         exit(0)
